@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>FitLife Shop </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Internal CSS  -->
+  <style>
+    table.product-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 35px;
+    }
+    table.product-table th,
+    table.product-table td {
+      border: 1px solid #1f2933;
+      padding: 10px;
+      text-align: center;
+    }
+    table.product-table th {
+      background-color: #0b1785;
+      color: #ffffff;
+    }
+    table.product-table tr:nth-child(even) {
+      background-color: #f1f5f9;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">Fit<span>Life</span></div>
+    <nav id="navbar">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html" class="active">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="page-content">
+    <h1>All Products</h1>
+    <p>Our collection of Fitness Products.</p>
+    <p>More Items Added every week.</p>
+
+    <!-- Table -->
+    <table class="product-table">
+      <thead>
+        <tr>
+          <th>Products</th>
+          <th>Category</th>
+          <th>Price</th>
+          <th>In Stock</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>ABS stimulator </td>
+          <td>AB machine</td>
+          <td>$43</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>Adjustable Dumbell</td>
+          <td>core finess</td>
+          <td>$300</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>Music boxy machine</td>
+          <td>Boxing</td>
+          <td>$59</td>
+          <td>yes</td>
+        </tr>
+        <tr>
+          <td>Hand weight</td>
+          <td>Muscle Toning</td>
+          <td>$22</td>
+          <td>yes</td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+  <footer class="site-footer">
+    <p>FitLife Shop</p>
+  </footer>
+</body>
+</html>

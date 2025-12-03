@@ -1,0 +1,263 @@
+/* ========== Styles ========== */
+:root {
+  --bg-dark: #020617;
+  --bg-light: #f8fafc;
+  --primary: #0b7285;
+  --primary-soft: #22b8cf;
+  --accent: #fbbf24;
+  --text-main: #0f172a;
+  --text-light: #e5e7eb;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+/* ========== Header & Nav ========== */
+
+.site-header {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 7%;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bue;
+}
+.logo span {
+  color: var(--primary-soft);
+}
+
+#navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+#navbar .nav-links a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+#navbar .nav-links a:hover {
+  color: var(--accent);
+}
+
+#navbar .nav-links a.active {
+  border-bottom: 2px solid var(--accent);
+}
+
+/* ========== Hero Section ========== */
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 7%;
+  background: linear-gradient(120deg, var(--bg-dark), #022c43);
+  color: var(--text-light);
+}
+
+.hero-text {
+  flex: 1 1 280px;
+  min-width: 260px;
+  margin-right: 20px;
+}
+
+.hero-title {
+  font-size: 2rem;
+  margin-bottom: 10px;  
+}
+
+.hero-text p {
+  margin-bottom: 15px;
+  max-width: 300px;
+}
+
+/* ========== Buttons ========== */
+
+.btn-primary,
+.btn-secondary {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 5px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+  animation: pulse 1s infinite;
+}
+
+.btn-secondary {
+  background: var(--accent);
+  color: #1f2933;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.3);
+}
+
+/* ========== Product Grid ========== */
+
+.product-grid {
+  padding: 20px 7% 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.product-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 10px;
+  max-width: 250px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(15, 23, 42, 0.12);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card img {
+  width: 75%;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.25);
+}
+
+.product-card .price {
+  font-weight: bold;
+  color: var(--primary-soft);
+}
+
+/* ========== Page Content & Forms ========== */
+
+.page-content {
+  padding: 30px 7% 60px;
+}
+
+.contact-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.forms-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.form-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  flex: 1 1 280px;
+  box-shadow: 0 4px 8px rgba(15, 23, 42, 0.1);
+}
+
+.form-card h2 {
+  margin-bottom: 10px;
+}
+
+.form-card label {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 4px;
+  font-size: 0.9rem;
+}
+
+.form-card input[type="text"],
+.form-card input[type="email"],
+.form-card select,
+.form-card textarea {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  font-size: 1rem;
+}
+
+.form-card textarea {
+  resize: vertical;
+}
+
+/* ========== Footer ========== */
+
+.site-footer {
+  text-align: center;
+  padding: 15px;
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  font-size: 1rem;
+}
+
+/* ========== Animations ========== */
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(34, 184, 207, 0.6);
+  }
+  70% {
+    transform: scale(1.03);
+    box-shadow: 0 0 0 14px rgba(34, 184, 207, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(34, 184, 207, 0);
+  }
+}
+
+/* ========== Responsive ========== */
+
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .forms-wrapper {
+    flex-direction: column;
+  }
+}

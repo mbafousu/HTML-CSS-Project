@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>FitLife Shop</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">Fit<span>Life</span></div>
+    <nav id="navbar">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="page-content contact-layout">
+    <section class="contact-info">
+      <h1>Contact & Orders</h1>
+      <p>Have a question about a product or want to place a custom order? Send us a message.</p>
+    </section>
+
+    <section class="forms-wrapper">
+      <!-- Order & Contact Form -->
+      <form class="form-card" action="#" method="post">
+        <h2>Order Inquiry</h2>
+
+        <label for="name">Full Name</label>
+        <input id="name" type="text" name="name" required>
+
+        <label for="email">Email</label>
+        <input id="email" type="email" name="email" required>
+
+        <!-- DROPDOWN  -->
+        <label for="product-type">Product Type</label>
+        <select id="product-type" name="product-type">
+          <option value="scale">Weighing</option>
+          <option value="Dumbell">Core</option>
+          <option value="smart watch">Monitor</option>
+          <option value="Bands">Resistance</option>
+        </select>
+
+        <label for="message">Message / Order Details</label>
+        <textarea id="message" name="message" rows="4"></textarea>
+
+        <button type="submit" class="btn-primary">Send Inquiry</button>
+      </form>
+
+      <!--  Signup -->
+      <form class="form-card" action="#" method="post">
+        <h2>Newsletter Signup</h2>
+        <p>Get updates about new products, discounts, and tips.</p>
+
+        <label for="newsletter-email">Email</label>
+        <input id="newsletter-email" type="email" name="newsletter-email" required>
+
+        <label>
+          <input type="checkbox" name="promos" checked>
+          Send me special promotions
+        </label>
+
+        <button type="submit" class="btn-secondary">Subscribe</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>FitLife Shop</p>
+  </footer>
+</body>
+</html>
